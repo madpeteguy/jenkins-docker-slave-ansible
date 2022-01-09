@@ -10,16 +10,15 @@ on:
 
 jobs:
   create-pre-release:
-    name: Create release
+    name: Create pre-release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Create Release
-        id: create_release
+      - name: Create PreRelease
         uses: ncipollo/release-action@v1
         with:
-          name: Release ${{ github.ref_name }}
+          name: PreRelease ${{ github.ref_name }}
           tag: ${{ github.ref }}
           draft: true
           prerelease: true
