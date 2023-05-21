@@ -1,4 +1,4 @@
-FROM madpeteguy/jenkins-docker-slave-ssh:1.1.0
+FROM madpeteguy/jenkins-docker-slave-ssh:1.2.0
 
 LABEL maintainer="Mad Pete Guy"
 
