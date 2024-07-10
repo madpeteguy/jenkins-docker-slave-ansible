@@ -1,4 +1,4 @@
-FROM madpeteguy/jenkins-docker-slave-ssh:1.3.0
+FROM madpeteguy/jenkins-docker-slave-ssh:1.4.0
 
 LABEL maintainer="Mad Pete Guy"
 
@@ -6,7 +6,7 @@ LABEL maintainer="Mad Pete Guy"
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get -qy full-upgrade && \
+    apt-get -qy upgrade && \
     apt-get install -qy ansible sshpass rsync && \
 # Cleanup old packages
     apt-get -qy autoremove
